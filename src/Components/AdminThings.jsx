@@ -19,7 +19,7 @@ function AdminThings() {
 
   let fetchMovieData = async () => {
     try {
-      let Allmovies = await axios.get(`${Config.api}api/movie/movies`);
+      let Allmovies = await axios.get(`${Config.api}/api/movie/movies`);
       setMoviesList(Allmovies.data);
       console.log(Allmovies)
     } catch (error) {
