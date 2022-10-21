@@ -15,16 +15,21 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { UserProvider } from "./Components/usercontext";
 import AddMovies from "./Components/AddMovies";
-
+import { useState } from "react";
 function App() {
   const navigate = useNavigate();
-
+  // const [user, Setuser] = useState([]);
+  // Setuser();
   return (
     <div className="app">
       <ResponsiveAppBar />
       <UserProvider>
         <Routes>
           <Route path="/" element={<UserLogin />} />
+          {/* <Route
+            path="/dashboard"
+            element={user ? <Dashboard /> : <UserLogin />}
+          /> */}
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/addmovies" element={<AddMovies />} />

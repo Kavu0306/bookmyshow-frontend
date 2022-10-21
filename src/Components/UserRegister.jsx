@@ -34,7 +34,7 @@ function UserRegister() {
 
     onSubmit: async (values) => {
       try {
-        const login = await axios.post(`${Config.api}/usersregister`, values);
+        const login = await axios.post(`${Config.api}/api/access/usersregister`, values);
         toast.success(login.data.message);
         formik.resetForm();
         navigate("/userlogin");
